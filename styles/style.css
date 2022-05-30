@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  body {
+    position: relative;
+    height: 100vh;
+    background-color: #0E0E0E;
+    user-select: none;
+  }
+
+  h1{
+    font-family: "Courier-Bold";
+    color: honeydew;
+    font-size: 3rem;
+    letter-spacing: 0.08em;
+  }
+
+  @font-face {
+    font-family: "Courier-Bold";
+    src: url("fonts/Courier New Bold.ttf");
+  }
+
+  @font-face {
+    font-family: "Courier-Regular";
+    src: url("fonts/Courier New.ttf");
+  }
+
+  .intro-section{
+    width: 100%;
+    height: 5rem;
+    border-bottom: 1px solid honeydew;
+  }
