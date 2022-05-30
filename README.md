@@ -1,2 +1,2 @@
-# surrealist-poetry
-Surrealist poetry generator
+# inkblotyper
+Computacional creativity class project by Mariana Silva and Ricardo Sacadura.
