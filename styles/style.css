@@ -34,3 +34,12 @@ h1 {
   height: 5rem;
   border-bottom: 1px solid honeydew;
 }
+
+#output-section {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+  padding: 1rem;
+  border: 1px solid red;
+}
