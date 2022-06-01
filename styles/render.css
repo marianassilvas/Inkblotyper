@@ -2,10 +2,12 @@
 #output-section {
     position: relative;
     display: flex;
+    display:none ; /*tirar*/
     justify-content: center;
     margin: 5rem auto 1rem auto;
     width: 50%;
     padding: 1rem;
     border: 1px solid red;
+    
   }
   

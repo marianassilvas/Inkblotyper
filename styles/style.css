@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
+  cursor: none;
 }
 
 @font-face {
@@ -39,9 +40,6 @@ nav{
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  
- 
-  z-index: 3;
 }
 
 #titulo h1{
@@ -63,6 +61,54 @@ nav{
   padding-inline: 20px;
 }
 
+main{
+  width: 100%;
+  display: flex;
+  margin-top: 5rem;
+  font-family: "HelveticaNeue-01";
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+#content-section{
+display: flex;
+width: 100%;
+height: 30rem;
+align-content: center;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+#write-section{
+display: flex;
+}
+
+input[type=text]{
+  letter-spacing: 2px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: honeydew;
+  border-bottom: 1px solid honeydew;
+  font-family: "Courier-Regular";
+  font-variant-caps: all-petite-caps;
+  font-size:6rem ;
+  width: 50vw;
+  text-align: center;
+}
+input[type=text]::selection{
+  background: honeydew;
+   color: rgb(0, 0, 0);
+}
+#content-section > h2{
+  width: 50vw;
+  margin-top: 20px;
+  right: 0;
+  }
+
+
 footer{
   width: 100%;
   height: 5rem;
@@ -72,8 +118,81 @@ footer{
   flex-direction: row;
   /* flex-wrap: nowrap; */
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  
   bottom: 0;
-  z-index: 3;
+
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  
+}
+
+.button {
+  appearance: none;
+  background-color: transparent;
+  border: 1px solid honeydew;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: honeydew;
+  font-size:0.7rem;
+  line-height: normal;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+.button:disabled {
+  pointer-events: none;
+}
+
+.button:hover {
+  color: honeydew;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: scale(30px);
+}
+
+.button:active {
+  box-shadow: none;
+}
+
+.inner-cursor{
+
+  position: fixed;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid white;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: width 0.5s, height 0.5s;
+}
+
+.inner-cursor.grow{
+  width: 25px;
+  height: 25px;
+  transition: width 0.5s, height 0.5s;
+}
+
+.outer-cursor{
+  position: fixed;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  transform: translate(-50%, -50%);
+  border: 1px solid white;
+  mix-blend-mode: difference;
+  border-radius: 50%;
+  pointer-events: none;
+  
 }
